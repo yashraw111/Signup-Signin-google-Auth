@@ -7,8 +7,8 @@ import ContinueWithGoogle from "./Layout/ContinueWithGoogle"
 import { useEffect, useState } from "react"
 import { auth } from "./Layout/Firebase"
 import './assets/css/style.css'
-import Welcome from "./pages/welcome"
 import ForgotPassword from "./Layout/ForgotPassword"
+import Welcome from "./Layout/Welcome"
 
 function App() {
   const[user,SetUser]=useState()
