@@ -8,11 +8,10 @@ import { useEffect, useState } from "react"
 import { auth } from "./Layout/Firebase"
 import './assets/css/style.css'
 import Welcome from "./pages/welcome"
+import ForgotPassword from "./Layout/ForgotPassword"
 
 function App() {
-
   const[user,SetUser]=useState()
-
   useEffect(()=>{
     auth.onAuthStateChanged((user)=>{
       SetUser(user)
@@ -27,6 +26,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp></SignUp>} ></Route>
         <Route path="/Signwithgoogle" element={<ContinueWithGoogle></ContinueWithGoogle>} ></Route>
         <Route path="/welcome" element={<Welcome></Welcome>} ></Route>
+        <Route path="/forgot" element={<ForgotPassword></ForgotPassword>} ></Route>
       </Routes>
      </Routers>
     </>

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./Firebase";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const {
@@ -32,23 +32,23 @@ const SignUp = () => {
 
   return (
     <>
-      <section className="vh-100">
+      <section className="vh-100 signup">
         <div className="container py-5 h-100">
           <div className="row d-flex align-items-center justify-content-center h-100">
-            <div className="col-md-8 col-lg-7 col-xl-6">
+            <div className="col-12 col-md-8 col-lg-7 col-xl-6 mb-4 mb-md-0">
               <img
                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-                className="img-fluid"
+                className="img-fluid w-100"
                 alt="Sign Up illustration"
               />
             </div>
-            <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <div className="col-12 col-md-7 col-lg-5 col-xl-5 offset-xl-1">
               <form onSubmit={handleSubmit(Signup)}>
                 <h3 className="text-center mb-4">Sign Up</h3>
 
                 {/* Email input */}
-                <div className="form-outline mb-4">
-                  <label className="form-label " htmlFor="emailInput">
+                <div className="form-outline mb-3">
+                  <label className="form-label" htmlFor="emailInput">
                     Email address
                   </label>
                   <input
@@ -70,7 +70,7 @@ const SignUp = () => {
                 </div>
 
                 {/* Password input */}
-                <div className="form-outline mb-4">
+                <div className="form-outline mb-3">
                   <label className="form-label" htmlFor="passwordInput">
                     Password
                   </label>
@@ -92,8 +92,8 @@ const SignUp = () => {
                   )}
                 </div>
 
-                {/* Submit button */}
-                <div className="d-flex justify-content-around">
+                {/* Buttons */}
+                <div className="d-flex justify-content-center gap-2">
                   <button
                     type="submit"
                     className="btn btn-primary btn-lg btn-block"
