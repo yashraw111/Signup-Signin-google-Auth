@@ -10,7 +10,6 @@ import { auth } from "./Firebase";
 import { NavLink } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
-
 const SignIn = () => {
   const {
     register,
@@ -30,7 +29,6 @@ const SignIn = () => {
         toast.error("Login failed", { position: "top-center" });
       });
   }
-
   function googleAuth() {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)

@@ -3,13 +3,13 @@ import { BrowserRouter as Routers,Routes,Route, Navigate } from "react-router-do
 import 'bootstrap/dist/css/bootstrap.css'
 import SignUp from "./Layout/SignUp"
 import SignIn from "./Layout/SignIn"
-import ContinueWithGoogle from "./Layout/ContinueWithGoogle"
+// import ContinueWithGoogle from "./Layout/ContinueWithGoogle"
 import { useEffect, useState } from "react"
 import { auth } from "./Layout/Firebase"
 import './assets/css/style.css'
 import ForgotPassword from "./Layout/ForgotPassword"
 import Welcome from "./Layout/Welcome"
-
+import ContinueWithGoogle from "./Layout/ContinueWithGoogle"
 function App() {
   const[user,SetUser]=useState()
   useEffect(()=>{
@@ -27,6 +27,8 @@ function App() {
         <Route path="/Signwithgoogle" element={<ContinueWithGoogle></ContinueWithGoogle>} ></Route>
         <Route path="/welcome" element={<Welcome></Welcome>} ></Route>
         <Route path="/forgot" element={<ForgotPassword></ForgotPassword>} ></Route>
+
+        {/* <Route path="/" element={<ContinueWithGoogle></ContinueWithGoogle>} ></Route> */}
       </Routes>
      </Routers>
     </>

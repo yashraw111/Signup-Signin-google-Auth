@@ -18,9 +18,7 @@ const ContinueWithGoogle = () => {
             console.log(err);
         })
     }
-
     const[user,SetUser]=useState(null)
-
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth,(user)=>{
             if(user){
@@ -45,7 +43,6 @@ const ContinueWithGoogle = () => {
         })
     }
   return (
-    // <div>ContinueWithGoogle</div>
     <>
     {
         user?(
@@ -54,7 +51,7 @@ const ContinueWithGoogle = () => {
             <div className="col-lg-4 shadow p-4 mx-auto">
             <h3>welcome ,{user.displayName}</h3>
             <p>{user.email}</p>
-            <img className='rounded' src={user.photoURL} alt="" />
+            <img className='rounded' src={user.photoURL} alt="djhjhd" />
             </div>
            </div>
             <button onClick={logOut}>logOut</button>
@@ -69,8 +66,6 @@ const ContinueWithGoogle = () => {
           </button>
           </>
     }
-    
-   
     </>
   )
 }
